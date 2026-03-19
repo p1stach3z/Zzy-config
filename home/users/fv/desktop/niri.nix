@@ -5,8 +5,10 @@ let
   Mod = "Mod";
 in
 {
+  
+  programs.niri.package = pkgs.niri-unstable;
+
   programs.niri = {
-    package = [ pkgs.niri-unstable ];
 
     settings = {
       outputs."eDP-1" = {
