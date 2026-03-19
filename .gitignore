@@ -1,0 +1,14 @@
+# Nix
+result
+result-*
+*.drv
+
+# Flakes
+flake.lock
+
+# Editor
+*.swp
+*.tmp
+
+# OS
+.DS_Store

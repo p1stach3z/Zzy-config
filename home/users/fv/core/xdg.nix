@@ -6,7 +6,7 @@
   home.sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
 
   xdg.configFile."user-dirs.dirs".text = ''
-    XDG_DESKTOP_DIR="$HOME/Files/desktop"
+    XDG_DESKTOP_DIR="$HOME/Files/Desktop"
     XDG_DOWNLOADS_DIR="$HOME/Downloads"
     XDG_TEMPLATES_DIR="$HOME/Code"
     XDG_PUBLICSHARE_DIR="$HOME/Code"

@@ -1,5 +1,5 @@
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, specialArgs, ... }:
 {
   imports = [
     ./core

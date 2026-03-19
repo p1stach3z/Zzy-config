@@ -29,8 +29,8 @@
     '';
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#Zzy";
-      flakedit = "sudoedit /etc/nixos/flake.nix";
+      rebuild = "sudo nixos-rebuild --flake /home/fv/Code/nixos-build#Zzy switch";
+      flakedit = "nvim /home/fv/Code/nixos-build/flake.nix";
 
       ls = "eza";
       lsa = "eza -a";

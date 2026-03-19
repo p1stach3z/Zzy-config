@@ -1,5 +1,5 @@
+{ config, pkgs, lib, ... }:
 
-{ ... }:
 {
   imports = [
     ./git.nix
@@ -11,5 +11,6 @@
     ./fuzzel.nix
     ./kitty.nix
     ./ssh.nix
+    # ./obsidian.nix
   ];
 }

@@ -43,7 +43,7 @@
 
         modules = [
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          ./hosts/zzy
+          ./hosts/Zzy
           
           niri.nixosModules.niri
 
