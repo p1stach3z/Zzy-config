@@ -29,8 +29,10 @@
     '';
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild --flake /home/fv/Code/nixos-build#Zzy switch";
-      flakedit = "nvim /home/fv/Code/nixos-build/flake.nix";
+      nixcheck = "git -C ~/Code/nixos-build status && nix flake check ~/Code/nixos-build && sudo nixos-rebuild dry-build --flake ~/Code/nixos-build#Zzy";
+      nixswitch = "sudo nixos-rebuild switch --flake ~/Code/nixos-build#Zzy";
+      nixupdate = "cd ~/Code/nixos-build && git add . && (git diff --cached --quiet || git commit -m \"update: $(date +%F-%H%M)\") && git push && sudo nixos-rebuild switch --flake .#Zzy";
+      flakedit = "nvim ~/Code/nixos-build/flake.nix";
 
       ls = "eza";
       lsa = "eza -a";

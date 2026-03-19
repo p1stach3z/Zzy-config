@@ -119,18 +119,17 @@ in
         "XF86MonBrightnessUp".action.spawn = [ "brightnessctl" "set" "+10%" ];
         "XF86MonBrightnessDown".action.spawn = [ "brightnessctl" "set" "10%-" ];
 
-        # Importante: ~ y $(date ...) no se expanden sin shell
         "Print".action.spawn = [
-          "sh" "-c"
-          "mkdir -p ~/Media/pictures/screenshots && grim ~/Media/pictures/screenshots/ss-$(date +%F-%T).png"
-        ];
+	  "sh" "-c"
+	  "mkdir -p ~/Media/pictures/screenshots && grim ~/Media/pictures/screenshots/ss-$(date +%F-%H%M%S).png"
+	];
 
-        "Shift+Print".action.spawn = [
-          "sh" "-c"
-          "mkdir -p ~/Media/pictures/screenshots && grim -g \"$(slurp)\" ~/Media/pictures/screenshots/ss-$(date +%F-%T).png"
-        ];
+	"Shift+Print".action.spawn = [
+	  "sh" "-c"
+	  "mkdir -p ~/Media/pictures/screenshots && FILE=~/Media/pictures/screenshots/ss-$(date +%F-%H%M%S).png && grim -g \"$(slurp)\" \"$FILE\" && wl-copy < \"$FILE\""
+	];
       };
-
+      
       environment = {
         QT_QPA_PLATFORM = "wayland";
         QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
