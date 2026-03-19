@@ -1,10 +1,8 @@
-
 {
-  description = "My ideapad flake (modular).";
+  description = "My ideapad flake (modular)";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     home-manager = {
@@ -40,14 +38,16 @@
       nixosConfigurations.Zzy = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
-
         modules = [
+          ({ ... }: {
+            nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+          })
+
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
           ./hosts/Zzy
-          
           niri.nixosModules.niri
-
           home-manager.nixosModules.home-manager
+
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
