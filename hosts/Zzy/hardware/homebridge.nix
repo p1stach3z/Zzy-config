@@ -13,8 +13,6 @@
 	pin = "031-45-154";
       };
       
-      description = "Homebridge en NixOs";
-
       accessories = [];
 
       platforms = [];
