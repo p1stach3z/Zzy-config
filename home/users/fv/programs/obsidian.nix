@@ -4,12 +4,11 @@
 
   programs.obsidian = {
     enable = true;
-    vaults = {
-      SecondBrain = {
-        enable = true;
-	target = "Files/Obsidian/SecondBrain";
-      };
-    };
+    # vaults = {
+    #   SecondBrain = {
+    #   enable = true;
+    #   };
+    # };
     
   };
 
