@@ -3,6 +3,7 @@
 {
   programs.bash = {
     enable = true;
+    enableCompletion = true;
     historyControl = [ "erasedups" "ignoreboth" ];
     historySize = 15000;
 
