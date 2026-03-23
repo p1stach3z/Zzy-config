@@ -12,5 +12,7 @@
     mesa-demos
     libimobiledevice
     pavucontrol
+    nodejs
+    net-tools
   ];
 }
