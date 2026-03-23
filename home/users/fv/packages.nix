@@ -10,4 +10,9 @@
     lf
     w3m
   ];
+
+  programs.nix-index = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 }
