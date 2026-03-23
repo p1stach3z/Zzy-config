@@ -5,7 +5,7 @@
   services.homebridge = {
     enable = true;
     user = "fv";
-    config = {
+    settings = {
       bridge = {
         name = "Homebridge";
 	username = "0E:1F:2A:3B:4C:5D";
