@@ -11,7 +11,7 @@
 
   home.username = "fv";
   home.homeDirectory = "/home/fv";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   systemd.user.startServices = "sd-switch";
 }
