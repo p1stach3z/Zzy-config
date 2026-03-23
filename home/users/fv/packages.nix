@@ -9,6 +9,9 @@
     fd
     lf
     w3m
+    fastfetch
+    inetutils
+    nmap
   ];
 
   programs.nix-index = {

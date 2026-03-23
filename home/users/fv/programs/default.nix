@@ -12,6 +12,5 @@
     ./kitty.nix
     ./ssh.nix
     ./obsidian.nix
-    # ./fastfetch.nix
   ];
 }
