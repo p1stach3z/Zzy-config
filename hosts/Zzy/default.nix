@@ -16,6 +16,7 @@
     ./system/packages.nix
 
     ./hardware/amd-gpu-rocm.nix
+    ./hardware/homebridge.nix
 
     ./services/journald.nix
     ./services/pipewire.nix
