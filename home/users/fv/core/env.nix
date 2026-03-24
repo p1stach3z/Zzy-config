@@ -16,7 +16,6 @@
     RUSTICL_ENABLE = "radeonsi";
 
     QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "gtk";
     QT_STYLE_OVERRIDE = "adwaita-dark";
   };
 
