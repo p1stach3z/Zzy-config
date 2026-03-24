@@ -22,8 +22,8 @@
       "kernel.net.core.wmem_default" = 1048576;
       "kernel.net.core.wmem_max" = 16777216;
       "kernel.net.core.optmem_max" = 65536;
-      "kernel.net.ipv4.tcp_rmem" = 4096 1048576 2097152;
-      "kernel.net.ipv4.tcp_wmem" = 4096 65536 16777216;
+      "kernel.net.ipv4.tcp_rmem" = 4096;
+      "kernel.net.ipv4.tcp_wmem" = 4096;
     };
 
     loader = {
