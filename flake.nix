@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nix-index-database.url = "github:nix-community/nix-index-database";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     
     home-manager = {
@@ -15,10 +14,15 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, nix-index-database, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -41,6 +45,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = ".bak";
+
+	    home-manager.extraSpecialArgs = { inherit inputs; };
+
             home-manager.users.fv = import ./home/users/fv;
           }
         ];
