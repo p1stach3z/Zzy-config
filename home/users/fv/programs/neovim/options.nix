@@ -17,8 +17,24 @@
       ignorecase = true;
       smartcase = true;
       updatetime = 250;
-    };
 
+      backup = true;
+      writebackup = true;
+      swapfile = true;
+      undofile = true;
+
+      backupext = ".bak";
+
+      backupdir = [ "~/.local/state/nvim/backup//" ];
+      directory = [ "~/.local/state/nvim/swap//" ];
+      undodir = [ "~/.local/state/nvim/undo//" ];
+
+    };
     globals.mapleader = " ";
   };
+
+  home.file.".local/state/nvim/backup/.keep".text = "";
+  home.file.".local/state/nvim/swap/.keep".text = "";
+  home.file.".local/state/nvim/undo/.keep".text = "";
+
 }

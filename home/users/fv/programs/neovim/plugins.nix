@@ -3,7 +3,8 @@
   programs.nixvim = {
     extraPackages = with pkgs; [
       stylua
-      nixfmt-rfc-style
+      nixfmt
+      gruvbox
     ];
 
     plugins = {
