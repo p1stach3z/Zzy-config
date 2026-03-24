@@ -11,9 +11,6 @@
       initrd.enable = true;
       opencl = {
 	enable = true;
-	extraPackages = with pkgs; [  
-	  mesa.opencl
-	];
       };
       overdrive = {
         enable = true;
@@ -25,7 +22,8 @@
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
-        libvdpau-va-gl
+        mesa.opencl
+	libvdpau-va-gl
         rocmPackages.clr
         rocmPackages.clr.icd
         rocmPackages.amdsmi
