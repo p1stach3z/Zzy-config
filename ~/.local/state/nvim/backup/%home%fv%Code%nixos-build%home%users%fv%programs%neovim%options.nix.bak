@@ -11,6 +11,7 @@
       smartindent = true;
 
       termguicolors = true;
+      colorschemes.gruvbox.enable = true;
       scrolloff = 8;
       signcolumn = "yes";
       wrap = false;
