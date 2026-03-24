@@ -30,6 +30,10 @@
       "mem_sleep_default=s2idle"
       "amd_pstate=active"
       "psmouse.synaptics_intertouch=0"
+      "amdgpu.vm_fragment_size=9"
+      "amdgpu.audio=0"
+      "amdgpu.dc=0"
+      "amdgpu.aspm=0"
     ];
     blacklistedKernelModules = [ "k10temp" ];
 
