@@ -12,7 +12,6 @@
     ./system/security.nix
     ./system/power.nix
     ./system/users.nix
-    ./system/fonts.nix
     ./system/packages.nix
 
     ./hardware/amd-gpu-rocm.nix
