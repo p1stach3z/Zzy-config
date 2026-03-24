@@ -9,7 +9,13 @@
       };
     amdgpu = {
       initrd.enable = true;
-      opencl.enable = true;
+      opencl = {
+	enable = true;
+	extraPackages = with pkgs; [  
+          mesa.opencl
+	  rusticl
+	];
+      };
       overdrive = {
         enable = true;
         ppfeaturemask = "0xffffffff";
