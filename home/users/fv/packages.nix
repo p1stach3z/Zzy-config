@@ -12,7 +12,6 @@
     fastfetch
     inetutils
     nmap
-    nix-index
   ];
 
 }
