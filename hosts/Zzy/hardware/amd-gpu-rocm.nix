@@ -14,7 +14,7 @@
       };
       overdrive = {
         enable = true;
-        ppfeaturemask = "0xffff7fff";
+        ppfeaturemask = "0xffffffff";
       };
     };
 
