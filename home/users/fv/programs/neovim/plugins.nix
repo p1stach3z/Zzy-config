@@ -4,7 +4,6 @@
     extraPackages = with pkgs; [
       stylua
       nixfmt
-      gruvbox
     ];
 
     plugins = {
