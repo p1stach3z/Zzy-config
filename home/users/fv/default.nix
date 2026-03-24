@@ -1,8 +1,8 @@
 
-{ config, pkgs, lib, specialArgs, ... }:
+{ config, pkgs, lib, specialArgs, inputs, ... }:
 {
   imports = [
-    nix-index-database.homeModules.nix-index
+    inputs.nix-index-database.homeModules.nix-index
     ./core
     ./programs
     ./desktop
@@ -15,4 +15,9 @@
   home.stateVersion = "25.05";
 
   systemd.user.startServices = "sd-switch";
+
+  programs.nix-index = {
+    enable = true;
+    enableBashIntegration = true; # o zsh/fish según uses
+  };
 }
