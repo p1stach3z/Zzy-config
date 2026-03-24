@@ -7,7 +7,7 @@
       subpixelRendering = "rgb";
     };
 
-    home.packages = with pkgs; [
+    packages = with pkgs; [
       liberation_ttf
       freefont_ttf
       unifont
