@@ -12,6 +12,6 @@
     ./kitty.nix
     ./ssh.nix
     ./obsidian.nix
-    ./nixvim
+    ./neovim
   ];
 }
