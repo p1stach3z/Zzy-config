@@ -59,7 +59,7 @@
 
           nix-index-database.homeModules.default
 
-          niri.homeModules.default
+          niri.homeModules.niri
         
         ];
       };
