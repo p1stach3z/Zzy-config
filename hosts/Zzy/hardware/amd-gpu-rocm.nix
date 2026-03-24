@@ -13,7 +13,7 @@
 	enable = true;
 	extraPackages = with pkgs; [  
           mesa.opencl
-	  rusticl
+	  mesa.rusticl
 	];
       };
       overdrive = {
