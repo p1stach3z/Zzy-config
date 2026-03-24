@@ -3,8 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nix-index-database.url = "github:nix-community/nix-index-database";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,11 +31,13 @@
           })
 
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          ./hosts/Zzy
-          niri.nixosModules.niri
-          home-manager.nixosModules.home-manager
-
-          {
+          
+	  ./hosts/Zzy
+          
+	  niri.nixosModules.niri
+          
+	  home-manager.nixosModules.home-manager
+	  {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = ".bak";
