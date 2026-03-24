@@ -41,7 +41,7 @@ in
       };
 
       cursor = {
-        theme = "adwaita";
+        theme = "adwaita-dark";
         size = 20;
         hide-when-typing = true;
         hide-after-inactive-ms = 1000;

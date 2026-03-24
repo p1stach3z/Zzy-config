@@ -14,10 +14,6 @@
     AMD_VULKAN_ICD = "RADV";
     ROCM_PATH = "/opt/rocm";
     RUSTICL_ENABLE = "radeonsi";
-
-    QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "gtk";
-    QT_STYLE_OVERRIDE = "adwaita-dark";
   };
 
   manual.manpages.enable = true;

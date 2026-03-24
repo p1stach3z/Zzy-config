@@ -76,6 +76,11 @@ in
         { argv = [ "uwsm" "finalize" ]; }
       ];
 
+      xwayland-satellite = {
+        enable = true;
+        path = lib.getExe pkgs.xwayland-satellite-unstable;
+      };
+
       binds = {
         "${Mod}+Return".action.spawn = [ "uwsm" "app" "--" "kitty" ];
         "${Mod}+R".action.spawn = [ "uwsm" "app" "--" "fuzzel" ];

@@ -7,6 +7,5 @@
     ./mako.nix
     ./waybar.nix
     ./niri.nix
-    ./ui.nix
   ];
 }
