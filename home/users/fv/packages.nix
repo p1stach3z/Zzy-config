@@ -10,7 +10,9 @@
     fastfetch
     inetutils
     nmap
-    profile-sync-daemon
+    nvtopPackages.amd
+    man-db
+    man-pages
   ];
 
 }

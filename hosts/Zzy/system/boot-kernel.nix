@@ -15,6 +15,15 @@
       "kernel.vm.dirty_background_bytes" = 4194304;
       "kernel.vm.dirty_bytes" = 4194304;
       "kernel.core_pattern" = false;
+      "kernel.net.core.netdev_max_backlog" = 16384;
+      "kernel.net.core.somaxconn" = 8192;
+      "kernel.net.core.rmem_default" = 1048576;
+      "kernel.net.core.rmem_max" = 16777216;
+      "kernel.net.core.wmem_default" = 1048576;
+      "kernel.net.core.wmem_max" = 16777216;
+      "kernel.net.core.optmem_max" = 65536;
+      "kernel.net.ipv4.tcp_rmem" = 4096 1048576 2097152;
+      "kernel.net.ipv4.tcp_wmem" = 4096 65536 16777216;
     };
 
     loader = {
@@ -39,6 +48,8 @@
       "amd_pstate=active"
       "psmouse.synaptics_intertouch=0"
       "amdgpu.vm_fragment_size=9"
+      "cfg80211.ieee80211_regdom=MX"
+      "mt7921e.disable_aspm=1" 
     ];
     blacklistedKernelModules = [ "k10temp" ];
   

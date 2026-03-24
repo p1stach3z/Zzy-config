@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    linux-firmware-mediatek
     util-linux
     coreutils
     efibootmgr
