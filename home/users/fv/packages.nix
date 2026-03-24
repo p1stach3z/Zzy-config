@@ -12,6 +12,7 @@
     fastfetch
     inetutils
     nmap
+    nix-index
   ];
 
   programs.nix-index = {
