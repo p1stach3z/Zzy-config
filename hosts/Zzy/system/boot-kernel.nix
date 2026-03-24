@@ -7,23 +7,23 @@
     kernelPackages = pkgs.linuxPackages_zen;
 
     kernel.sysctl = {
-      "kernel.kptr_restrict" = 2;
-      "kernel.dmesg_restrict" = 1;
-      "kernel.vm.dirty_ratio" = 10;
-      "kernel.vm.dirty_background_ratio" = 5;
-      "kernel.vm.vfs_cache_pressure" = 50;
-      "kernel.vm.dirty_background_bytes" = 4194304;
-      "kernel.vm.dirty_bytes" = 4194304;
-      "kernel.core_pattern" = false;
-      "kernel.net.core.netdev_max_backlog" = 16384;
-      "kernel.net.core.somaxconn" = 8192;
-      "kernel.net.core.rmem_default" = 1048576;
-      "kernel.net.core.rmem_max" = 16777216;
-      "kernel.net.core.wmem_default" = 1048576;
-      "kernel.net.core.wmem_max" = 16777216;
-      "kernel.net.core.optmem_max" = 65536;
-      "kernel.net.ipv4.tcp_rmem" = 4096;
-      "kernel.net.ipv4.tcp_wmem" = 4096;
+      "kptr_restrict" = 2;
+      "dmesg_restrict" = 1;
+      "vm.dirty_ratio" = 10;
+      "vm.dirty_background_ratio" = 5;
+      "vm.vfs_cache_pressure" = 50;
+      "vm.dirty_background_bytes" = 4194304;
+      "vm.dirty_bytes" = 4194304;
+      "core_pattern" = false;
+      "net.core.netdev_max_backlog" = 16384;
+      "net.core.somaxconn" = 8192;
+      "net.core.rmem_default" = 1048576;
+      "net.core.rmem_max" = 16777216;
+      "net.core.wmem_default" = 1048576;
+      "net.core.wmem_max" = 16777216;
+      "net.core.optmem_max" = 65536;
+      "net.ipv4.tcp_rmem" = 4096;
+      "net.ipv4.tcp_wmem" = 4096;
     };
 
     loader = {
