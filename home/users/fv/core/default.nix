@@ -6,6 +6,6 @@
     ./bash.nix
     ./env.nix
     ./fonts.nix
-    ./gnome-keyring.nix
+        #    ./gnome-keyring.nix
   ];
 }
