@@ -4,10 +4,11 @@
   fonts = {
     fontconfig = {
       enable = true;
-      useEmbeddedBitmaps = true;
+      subpixelRendering = "rgb";
+      antialising = true;
     };
 
-    packages = with pkgs; [
+    home.packages = with pkgs; [
       liberation_ttf
       freefont_ttf
       unifont
