@@ -4,7 +4,7 @@
   fonts = {
     fontconfig = {
       enable = true;
-      allowBitmaps = true;
+      useEmbeddedBitmaps = true;
     };
 
     packages = with pkgs; [
