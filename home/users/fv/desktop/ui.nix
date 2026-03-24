@@ -15,7 +15,7 @@
     };
 
     cursorTheme = {
-      name = "Adwaita";
+      name = "Adwaita-dark";
       package = pkgs.gnome.adwaita-icon-theme;
       size = 24;
     };
@@ -32,7 +32,7 @@
   };
   
   home.pointerCursor = {
-    name = "Adwaita-dark";
+    name = "Adwaita";
     package = pkgs.gnome.adwaita-icon-theme;
     size = 24;
 
