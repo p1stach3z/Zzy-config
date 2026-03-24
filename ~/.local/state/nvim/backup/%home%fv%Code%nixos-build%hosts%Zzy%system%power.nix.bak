@@ -28,6 +28,11 @@
     HandleLidSwitchDocked = "ignore";
   };
 
-  programs.cpu-energy-meter.enable = true;
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 25;
+  };
 
+  services.fstrim.enable = true;
 }
