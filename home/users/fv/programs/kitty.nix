@@ -13,4 +13,9 @@
       background_blur = 1;
     };
   };
+  
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+
 }

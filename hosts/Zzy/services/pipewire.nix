@@ -1,7 +1,6 @@
 
 { config, lib, pkgs, ... }:
 {
-  services.gnome.gnome-keyring.enable = true;
   programs.dconf.enable = true;
 
   services.pipewire = {

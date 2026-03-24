@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.nix-index-database.homeModules.default
+    inputs.nixvim.homeModules.nixvim
     ./core
     ./programs
     ./desktop
