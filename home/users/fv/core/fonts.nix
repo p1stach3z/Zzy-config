@@ -8,7 +8,7 @@
     };
   };
     
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     liberation_ttf
     freefont_ttf
     unifont
