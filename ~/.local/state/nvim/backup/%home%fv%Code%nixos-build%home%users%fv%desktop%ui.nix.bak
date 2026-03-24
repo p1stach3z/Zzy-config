@@ -31,7 +31,7 @@
     };
   };
   
-  pointerCursor = {
+  home.pointerCursor = {
     name = "Adwaita-dark";
     package = pkgs.gnome.adwaita-icon-theme;
     size = 24;
