@@ -16,7 +16,6 @@
 
   systemd.user.startServices = "sd-switch";
   
-  programs.command-not-found.enable = false;
   programs.nix-index = {
     enable = true;
     enableBashIntegration = true; # o zsh/fish según uses
