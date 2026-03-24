@@ -32,7 +32,7 @@
     };
     
     globals.mapleader = " ";
-    colorschemes.gruvbox.enable = true;
+    colorschemes.catppuccin.enable = true;
 
   };
 

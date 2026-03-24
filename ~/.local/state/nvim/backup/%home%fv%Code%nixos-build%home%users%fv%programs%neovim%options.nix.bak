@@ -11,7 +11,6 @@
       smartindent = true;
 
       termguicolors = true;
-      colorschemes.gruvbox.enable = true;
       scrolloff = 8;
       signcolumn = "yes";
       wrap = false;
@@ -31,7 +30,10 @@
       undodir = [ "~/.local/state/nvim/undo//" ];
 
     };
+    
     globals.mapleader = " ";
+    colorschemes.gruvbox.enable = true;
+
   };
 
   home.file.".local/state/nvim/backup/.keep".text = "";
