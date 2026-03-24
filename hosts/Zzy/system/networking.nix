@@ -2,6 +2,7 @@
 
 {
   networking = {
+    nameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" ];
     hostName = "Zzy";
 
     networkmanager.enable = false;
@@ -43,10 +44,12 @@
         DNSSEC = "allow-downgrade";
         FallbackDNS = [
           "1.1.1.1"
+	  "1.0.0.1"
           "8.8.8.8"
         ];
         # Si quieres conservar el comportamiento actual:
-        LLMNR = true;
+        domains = [ "~." ];
+	LLMNR = true;
       };
     };
   };

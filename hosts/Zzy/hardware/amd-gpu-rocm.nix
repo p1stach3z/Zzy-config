@@ -48,4 +48,6 @@
     in [
       "L+ /opt/rocm - - - - ${rocmEnv}"
     ];
+
+  services.fwupd.enable = true;
 }
