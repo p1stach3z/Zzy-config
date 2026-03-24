@@ -4,7 +4,7 @@
 
   services.nohang = {
     enable = true;
-    configPath = "desktop";
+    package = with pkgs; [ nohang-desktop ];
   };
 
 }
