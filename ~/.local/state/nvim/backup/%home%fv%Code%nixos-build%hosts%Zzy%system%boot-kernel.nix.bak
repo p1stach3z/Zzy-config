@@ -14,6 +14,7 @@
       "kernel.vm.vfs_cache_pressure" = 50;
       "kernel.vm.dirty_background_bytes" = 4194304;
       "kernel.vm.dirty_bytes" = 4194304;
+      "kernel.core_pattern" = false;
     };
 
     loader = {

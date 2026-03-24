@@ -4,7 +4,7 @@
   
   boot = {
     
-    boot.kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_zen;
 
     kernel.sysctl = {
       "kernel.kptr_restrict" = 2;
