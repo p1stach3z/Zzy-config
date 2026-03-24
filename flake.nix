@@ -22,7 +22,7 @@
 
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, nix-index-database, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
