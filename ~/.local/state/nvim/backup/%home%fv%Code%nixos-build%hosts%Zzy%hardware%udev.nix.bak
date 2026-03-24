@@ -4,8 +4,10 @@
   
   services.udev.extraRules = ''
     # Backlight control.
-    ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="amdgpu_bl0", TAG+="uaccess", GROUP="video", MODE="0664"
-    
+    SUBSYSTEM=="backlight", ACTION=="add", \
+      RUN+="/usr/bin/chgrp video /sys/class/backlight/amdgpu_bl0/brightness", \
+      RUN+="/usr/bin/chmod g+w /sys/class/backlight/amdgpu_bl0/brightness"
+ 
     # Storage scheduler.
     ACTION=="add|change", KERNEL=="nvme0n1*", ATTR{queue/scheduler}="none"
   
