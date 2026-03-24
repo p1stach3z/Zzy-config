@@ -8,7 +8,7 @@
     SUDO_EDITOR = "nvim";
     SYSTEMD_EDITOR = "nvim";
 
-    WAYLAND_DISPLAY="wayland-1";
+    WAYLAND_DISPLAY="wayland-0";
     DISPLAY="0";
         
     NIXOS_OZONE_WL = "1";
@@ -17,6 +17,7 @@
     AMD_VULKAN_ICD = "RADV";
     ROCM_PATH = "/opt/rocm";
     RUSTICL_ENABLE = "radeonsi";
+    
 
     QT_QPA_PLATFORM = "wayland";
   };

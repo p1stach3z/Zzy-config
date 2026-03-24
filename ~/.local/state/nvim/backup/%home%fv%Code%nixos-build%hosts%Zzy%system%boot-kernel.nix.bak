@@ -24,6 +24,7 @@
       "net.core.optmem_max" = 65536;
       "net.ipv4.tcp_rmem" = 4096;
       "net.ipv4.tcp_wmem" = 4096;
+      "vm.swappiness" = 10;
     };
 
     loader = {
@@ -35,13 +36,14 @@
       efi.canTouchEfiVariables = true;
     };
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" "usbhid" ];
+      availableKernelModules = [  "nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" "usbhid" ];
       kernelModules = [ "zenpower" "amdgpu" "ideapad_laptop" ];
     };
     # Laptop: S0ix + AMD P-state
     extraModulePackages = with config.boot.kernelPackages; [
       zenpower
     ];
+    
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelParams = [
       "mem_sleep_default=s2idle"
@@ -49,8 +51,15 @@
       "psmouse.synaptics_intertouch=0"
       "amdgpu.vm_fragment_size=9"
       "cfg80211.ieee80211_regdom=MX"
-      "mt7921e.disable_aspm=1" 
+      "mt7921e.disable_aspm=1"
+
+      # zswap section
+      "zswap.enabled=1" 
+      "zswap.compressor=zstd"
+      "zswap.max_pool_percent=20"       
+      "zswap.shrinker_enabled=1"    
     ];
+    
     blacklistedKernelModules = [ "k10temp" ];
   
     };
