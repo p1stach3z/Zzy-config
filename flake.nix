@@ -41,7 +41,8 @@
           })
 
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          
+          nix-index-database.nixosModules.default
+
 	        ./hosts/Zzy
           
 	        niri.nixosModules.niri
@@ -57,10 +58,6 @@
             home-manager.users.fv = import ./home/users/fv;
           }
 
-          nix-index-database.homeModules.default
-
-          niri.homeModules.niri
-        
         ];
       };
     };
