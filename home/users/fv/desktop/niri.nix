@@ -10,7 +10,7 @@ in
 
   programs.niri = {
 
-    config = {
+    settings = {
       outputs."eDP-1" = {
         mode = {
           width = 1920;
@@ -78,7 +78,7 @@ in
 
       xwayland-satellite = {
         enable = true;
-        path = lib.getExe pkgs.xwayland-satellite-unstable;
+        package = pkgs.xwayland-satellite-unstable;
       };
 
       binds = {

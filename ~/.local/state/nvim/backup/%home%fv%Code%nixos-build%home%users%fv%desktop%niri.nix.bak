@@ -10,7 +10,7 @@ in
 
   programs.niri = {
 
-    settings = {
+    config = {
       outputs."eDP-1" = {
         mode = {
           width = 1920;
