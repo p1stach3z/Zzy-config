@@ -16,7 +16,6 @@
     RUSTICL_ENABLE = "radeonsi";
 
     QT_QPA_PLATFORM = "wayland";
-    QT_STYLE_OVERRIDE = "adwaita-dark";
   };
 
   manual.manpages.enable = true;
