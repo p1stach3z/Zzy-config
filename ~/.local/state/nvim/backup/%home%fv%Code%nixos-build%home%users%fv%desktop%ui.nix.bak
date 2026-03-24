@@ -15,7 +15,7 @@
     };
 
     cursorTheme = {
-      name = "Adwaita";
+      name = "Adwaita-dark";
       package = pkgs.gnome.adwaita-icon-theme;
       size = 24;
     };
@@ -27,7 +27,17 @@
     platformTheme = "gtk";  # 👈 hace que Qt respete GTK
 
     style = {
-      name = "adwaita-dark";
+      name = "Adwaita-dark";
     };
   };
+  
+  pointerCursor = {
+    name = "Adwaita-dark";
+    package = pkgs.gnome.adwaita-icon-theme;
+    size = 24;
+
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
 }
