@@ -12,8 +12,7 @@
       opencl = {
 	enable = true;
 	extraPackages = with pkgs; [  
-          mesa.opencl
-	  opencl.rusticl
+	  mesa.opencl
 	];
       };
       overdrive = {
@@ -26,7 +25,6 @@
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
-        mesa
         libvdpau-va-gl
         rocmPackages.clr
         rocmPackages.clr.icd

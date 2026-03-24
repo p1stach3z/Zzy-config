@@ -13,6 +13,7 @@
 
     AMD_VULKAN_ICD = "RADV";
     ROCM_PATH = "/opt/rocm";
+    RUSTICL_ENABLE = "radeonsi";
   };
 
   manual.manpages.enable = true;
