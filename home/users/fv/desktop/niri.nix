@@ -78,7 +78,6 @@ in
 
       xwayland-satellite = {
         enable = true;
-        package = pkgs.xwayland-satellite-unstable;
       };
 
       binds = {
