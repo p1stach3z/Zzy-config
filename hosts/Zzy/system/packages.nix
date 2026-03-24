@@ -5,6 +5,7 @@
     linux-firmware
     util-linux
     coreutils
+    x86_energy_perf_policy
     efibootmgr
     lm_sensors
     pciutils
