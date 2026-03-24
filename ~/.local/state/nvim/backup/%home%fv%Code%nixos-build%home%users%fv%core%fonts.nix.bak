@@ -5,7 +5,6 @@
     fontconfig = {
       enable = true;
       subpixelRendering = "rgb";
-      antialising = true;
     };
 
     home.packages = with pkgs; [
