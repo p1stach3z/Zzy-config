@@ -4,7 +4,7 @@
   
   services.udev.extraRules = ''
     ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="amdgpu_bl0", TAG+="uaccess", GROUP="video", MODE="0664"
-    ACTION=="add|change", KERNEL=="nvme0n1*", ATTR{queue/scheduler}="none"
+    ACTION=="add|change", KERNEL=="nvme0n1", ATTR{queue/scheduler}="none"
   '';
 
 }
