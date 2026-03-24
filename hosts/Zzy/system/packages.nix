@@ -15,6 +15,5 @@
     pavucontrol
     nodejs
     net-tools
-    acpi_call
   ];
 }
