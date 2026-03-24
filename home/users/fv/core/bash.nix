@@ -11,7 +11,7 @@
     '';
 
     initExtra = ''
-      source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
+      source ${pkgs.nix-index.out}/etc/profile.d/command-not-found.sh
     '';
 
     bashrcExtra = ''
