@@ -2,7 +2,7 @@
 { config, pkgs, lib, specialArgs, ... }:
 {
   imports = [
-    inputs.nix-index-database.homeModules.nix-index
+    nix-index-database.homeModules.nix-index
     ./core
     ./programs
     ./desktop
