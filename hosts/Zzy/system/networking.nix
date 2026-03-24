@@ -2,12 +2,13 @@
 
 {
   networking = {
-    nameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" ];
+    nameservers = [ "1.1.1.1" "1.0.0.1" "9.9.9.9" ];
     hostName = "Zzy";
 
     networkmanager.enable = false;
     useDHCP = false;
     dhcpcd.enable = false;
+    wireless.enable = false;
 
     wireless.iwd = {
       enable = true;
@@ -37,19 +38,19 @@
 
   services.resolved = {
     enable = true;
-
     settings = {
       Resolve = {
         DNSOverTLS = "opportunistic";
         DNSSEC = "allow-downgrade";
+        LLMNR = true;
         FallbackDNS = [
           "1.1.1.1"
-	  "1.0.0.1"
-          "8.8.8.8"
+	        "1.0.0.1"
+          "9.9.9.9"
         ];
-        # Si quieres conservar el comportamiento actual:
+        
         domains = [ "~." ];
-	LLMNR = true;
+      
       };
     };
   };
