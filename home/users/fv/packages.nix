@@ -10,7 +10,6 @@
     fastfetch
     inetutils
     nmap
-    nvtop
     profile-sync-daemon
   ];
 
