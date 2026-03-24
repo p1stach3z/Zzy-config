@@ -4,9 +4,7 @@
   
   services.udev.extraRules = ''
     # Backlight control.
-    SUBSYSTEM=="backlight", ACTION=="add", \
-      RUN+="chgrp video /sys/class/backlight/amdgpu_bl1/brightness", \
-      RUN+="chmod g+w /sys/class/backlight/amdgpu_bl1/brightness"
+    ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="amdgpu_bl1", MODE="0666", RUN+="${pkgs.coreutils}/bin/chmod a+w /sys/class/backlight/%k/brightness" 
  
     # Storage scheduler.
     ACTION=="add|change", KERNEL=="nvme0n1*", ATTR{queue/scheduler}="none"
