@@ -4,7 +4,6 @@
   fonts = {
     fontconfig = {
       enable = true;
-      allowBitmaps = true;
       useEmbeddedBitmaps = true;
     };
 
