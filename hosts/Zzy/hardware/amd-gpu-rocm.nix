@@ -37,8 +37,12 @@
     };
     brillo.enable = true;
   };
+  
+  services.fwupd.enable = true;
 
   services.blueman.enable = true;
+  
+  services.frigate.vaapiDriver = "radeonsi";
 
   # /opt/rocm para apps que lo esperan.
   systemd.tmpfiles.rules =
@@ -51,5 +55,4 @@
       "L+ /opt/rocm - - - - ${rocmEnv}"
     ];
 
-  services.fwupd.enable = true;
 }
