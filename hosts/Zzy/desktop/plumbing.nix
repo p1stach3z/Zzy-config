@@ -15,8 +15,6 @@
   services.udisks2.enable = true;
   services.usbmuxd.enable = true;
 
-  programs.xwayland.enable = true;
-
   services.envfs.enable = true;
   
   xdg.portal = {
@@ -24,6 +22,7 @@
     wlr.enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
     ];
   };
 }

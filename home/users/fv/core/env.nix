@@ -7,9 +7,6 @@
     VISUAL = "nvim";
     SUDO_EDITOR = "nvim";
     SYSTEMD_EDITOR = "nvim";
-
-    WAYLAND_DISPLAY="wayland-0";
-    DISPLAY="0";
         
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
