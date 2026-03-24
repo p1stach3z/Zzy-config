@@ -1,7 +1,9 @@
 
 { config, lib, pkgs, ... }:
 {
+  
   boot = {
+    
     kernel.sysctl = {
       "kernel.kptr_restrict" = 2;
       "kernel.dmesg_restrict" = 1;
@@ -20,12 +22,16 @@
       kernelModules = [ "amdgpu" "ideapad_laptop" ];
     };
     # Laptop: S0ix + AMD P-state
-    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = with config.boot.kernelPackages; [
+      zenpower
+    ];
+    kernelModules = [ "kvm-amd" "zenpower" ];
     kernelParams = [
       "mem_sleep_default=s2idle"
       "amd_pstate=active"
       "psmouse.synaptics_intertouch=0"
     ];
+    blacklistedKernelModules = [ "k10temp" ];
 
     # Normalmente deja el kernel default (más caché, menos rebuilds).
     # kernelPackages = pkgs.linuxPackages_latest;
