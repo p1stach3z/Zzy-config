@@ -1,5 +1,5 @@
 
-{ config, pkgs, lib, specialArgs, inputs, ... }:
+{ config, pkgs, lib, specialArgs, ... }:
 {
   imports = [
     inputs.nix-index-database.homeModules.nix-index
