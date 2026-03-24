@@ -24,6 +24,7 @@
     ./services/ananicy.nix
     ./services/lact-coolercontrol.nix
     ./services/display.nix
+    ./services/nohang.nix
 
     ./desktop/plumbing.nix
 

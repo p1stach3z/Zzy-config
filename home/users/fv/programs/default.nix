@@ -12,6 +12,7 @@
     ./kitty.nix
     ./ssh.nix
     ./obsidian.nix
+    ./psd.nix 
     ./nixvim
   ];
 }
