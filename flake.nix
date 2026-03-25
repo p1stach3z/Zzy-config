@@ -57,10 +57,6 @@
             home-manager.users.fv = import ./home/users/fv;
           }
           
-          inputs.nix-index-database.homeModules.default
-        
-          inputs.niri.homeModules.default
-        
         ];
       };
     };

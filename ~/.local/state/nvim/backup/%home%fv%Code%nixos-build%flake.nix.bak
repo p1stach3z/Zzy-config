@@ -40,7 +40,12 @@
           })
 
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
+          
           ./hosts/Zzy
+          
+          nix-index-database.nixosModules.default
+          
+          niri.nixosModules.niri
 
           home-manager.nixosModules.home-manager
           {
