@@ -1,4 +1,4 @@
-{ config, pkgs, lib, specialArgs, ... }:
+{ config, pkgs, lib, specialArgs, inputs, ... }:
 
 let
   actions = config.lib.niri.actions;
@@ -6,6 +6,7 @@ let
 in
 {
 
+  
   programs.niri = {
 
     settings = {

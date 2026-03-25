@@ -49,7 +49,6 @@
       "amd_pstate=active"
       "psmouse.synaptics_intertouch=0"
       "amdgpu.vm_fragment_size=9"
-      "cfg80211.ieee80211_regdom=MX"
       "mt7921e.disable_aspm=1"
 
       # zswap section
