@@ -16,7 +16,8 @@
   services.usbmuxd.enable = true;
 
   services.envfs.enable = true;
-  
+  programs.xwayland.enable = true;
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -25,4 +26,5 @@
       pkgs.xdg-desktop-portal-gnome
     ];
   };
+
 }

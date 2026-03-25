@@ -4,7 +4,6 @@
 
   services.nohang = {
     enable = true;
-    configPath = "desktop";
   };
 
 }

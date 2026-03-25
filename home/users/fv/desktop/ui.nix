@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  gtk = {
+  gtk.gtk3 = {
     enable = true;
-
+  
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
