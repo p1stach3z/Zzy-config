@@ -6,8 +6,9 @@ let
 in
 {
 
-  
   programs.niri = {
+    package = pkgs.niri-unstable;
+    enable = true;
 
     settings = {
       outputs."eDP-1" = {
@@ -77,6 +78,7 @@ in
 
       xwayland-satellite = {
         enable = true;
+        path = lib.getExe pkgs.xwayland-satellite-unstable;
       };
 
       binds = {

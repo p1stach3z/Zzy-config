@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,40 +24,47 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, nix-index-database, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ inputs.niri.overlays.niri ];
+      };
     in {
       nixosConfigurations.Zzy = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
+
         modules = [
-          ({ ... }: {
-            nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-          })
-
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
-          nix-index-database.nixosModules.default
+          ./hosts/Zzy
 
-	        ./hosts/Zzy
-          
-	        niri.nixosModules.niri
-          
-	        home-manager.nixosModules.home-manager
-	        {
+          inputs.niri.nixosModules.niri
+          inputs.nix-index-database.nixosModules.default
+
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = ".bak";
-
-	          home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = { inherit inputs; };
 
             home-manager.users.fv = import ./home/users/fv;
           }
+        ];
+      };
 
+      homeConfigurations."fv@Zzy" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+
+        modules = [
+          inputs.nix-index-database.homeModules.default
+          inputs.niri.homeModules.default
+          (import ./home/users/fv)
         ];
       };
     };

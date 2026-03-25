@@ -12,7 +12,6 @@
       "seat"
       "i2c"
       "gamemode"
-      "polkituser"
     ];
   };
 }
