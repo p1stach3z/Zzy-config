@@ -26,24 +26,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, niri, nix-index-database, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ inputs.niri.overlays.niri ];
-      };
     in {
       nixosConfigurations.Zzy = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
 
         modules = [
+          ({ ... }: {
+            nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+          })
+
           nixos-hardware.nixosModules.lenovo-ideapad-slim-5
           ./hosts/Zzy
-
-          inputs.niri.nixosModules.niri
-          inputs.nix-index-database.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {
@@ -54,18 +51,12 @@
 
             home-manager.users.fv = import ./home/users/fv;
           }
+          
+          nix-index-database.homeModules.default
+        
+          niri.homeModules.default
+        
         ];
       };
-
-      homeConfigurations."fv@Zzy" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-
-        modules = [
-          inputs.nix-index-database.homeModules.default
-          inputs.niri.homeModules.default
-          (import ./home/users/fv)
-        ];
-      };
-    };
+    }
 }
