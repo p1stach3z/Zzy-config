@@ -52,9 +52,9 @@
             home-manager.users.fv = import ./home/users/fv;
           }
           
-          nix-index-database.homeModules.default
+          inputs.nix-index-database.homeModules.default
         
-          niri.homeModules.default
+          inputs.niri.homeModules.default
         
         ];
       };
