@@ -8,7 +8,6 @@ in
 
   programs.niri = {
     package = pkgs.niri-unstable;
-    enable = true;
 
     settings = {
       outputs."eDP-1" = {
