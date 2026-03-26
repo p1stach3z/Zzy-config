@@ -22,7 +22,7 @@
 
 
     kdePackages.qtsvg
-    okular
+    kdePackages.okular
     kdePackages.dolphin
     kdePackages.kio
     kdePackages.kio-extras

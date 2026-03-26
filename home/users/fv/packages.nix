@@ -30,7 +30,7 @@
     kdePackages.kdegraphics-thumbnailers
     
     file
-    ark
+    kdePackages.ark
     shared-mime-info
     libimobiledevice
     ifuse
