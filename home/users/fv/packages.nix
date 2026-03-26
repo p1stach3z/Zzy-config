@@ -15,7 +15,6 @@
     man-pages
     libimobiledevice
     ifuse
-    dolphin
   ];
 
 }
