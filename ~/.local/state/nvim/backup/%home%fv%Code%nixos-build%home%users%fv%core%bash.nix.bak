@@ -11,7 +11,7 @@
     '';
 
     initExtra = ''
-      echo "ya haz una suerte de diagrama para tus proósitos diarios y las horas que le vas a dedicar a realizar algo en concreto porque siempre inicias con una tarea, en este caso *dejar todo listo para ayudar a nadia con su disco duro* y terminas haciendo mil cosas menos esa y te dan las 3am"
+      echo "ya haz una suerte de diagrama para tus proósitos diarios y las horas que le vas a dedicar a realizar algo en concreto porque siempre inicias con una tarea, en este caso *dejar todo listo para ayudar a nadia con su disco duro* y terminas haciendo mil cosas menos esa y te dan las 3am""
     '';
 
     bashrcExtra = ''
