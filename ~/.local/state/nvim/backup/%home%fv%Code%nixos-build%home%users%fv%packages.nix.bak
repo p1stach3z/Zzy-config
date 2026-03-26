@@ -10,8 +10,12 @@
     fastfetch
     inetutils
     nmap
-    nvtop
-    profile-sync-daemon
-  ];
+    nvtopPackages.amd
+    man-db
+    man-pages
+    libimobiledevice
+    ifuse
+    dolphin
+  ]
 
 }
