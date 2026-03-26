@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     wget
+    curl
+    libnotify
     tealdeer
     fd
     lf
@@ -13,8 +15,23 @@
     nvtopPackages.amd
     man-db
     man-pages
+    xdg-utils
+
+    vlc
+    wev
+
+    dolphin
+    okular
+    kdePackages.kio
+    kdePackages.kio-extras
+    kdePackages.kdegraphics-thumbnailers
+    
+    file
+    ark
+    shared-mime-info
     libimobiledevice
     ifuse
+    libplist
   ];
 
 }
