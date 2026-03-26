@@ -13,6 +13,9 @@
     nvtopPackages.amd
     man-db
     man-pages
-  ];
+    libimobiledevice
+    ifuse
+    dolphin
+  ]
 
 }
