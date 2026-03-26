@@ -21,7 +21,7 @@
     wev
 
 
-    qtsvg
+    kdePackages.qtsvg
     okular
     kdePackages.dolphin
     kdePackages.kio
