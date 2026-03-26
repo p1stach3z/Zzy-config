@@ -20,10 +20,13 @@
     vlc
     wev
 
-    dolphin
+
+    qtsvg
     okular
+    kdePackages.dolphin
     kdePackages.kio
     kdePackages.kio-extras
+    kdePackages.kio-fuse
     kdePackages.kdegraphics-thumbnailers
     
     file
