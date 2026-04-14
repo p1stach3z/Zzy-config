@@ -30,6 +30,8 @@
     kdePackages.kdegraphics-thumbnailers
     
     file
+    ntfs3g
+    exfatprogs
     kdePackages.ark
     shared-mime-info
     libimobiledevice
