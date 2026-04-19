@@ -22,7 +22,7 @@
             --remember-user-session \
             --asterisks \
             --user-menu \
-            --sessions /run/current-system/sw/share/wayland-sessions:/run/current-system/sw/share/xsessions
+            --sessions --cmd "/run/current-system/sw/share/wayland-sessions:/run/current-system/sw/share/xsessions"
         '';
       };
     };
