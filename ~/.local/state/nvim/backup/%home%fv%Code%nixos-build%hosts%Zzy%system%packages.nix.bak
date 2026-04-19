@@ -20,6 +20,5 @@
     ninja
     llvmPackages_latest.llvm
     clang
-    rustup
   ];
 }
