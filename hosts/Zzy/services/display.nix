@@ -22,7 +22,6 @@
             --remember-user-session \
             --asterisks \
             --user-menu \
-            --sessions \
             --cmd "/run/current-system/sw/bin/uwsm start default"
         '';
       };
