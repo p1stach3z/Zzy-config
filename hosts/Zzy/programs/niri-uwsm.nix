@@ -13,11 +13,6 @@
         binPath = "${pkgs.niri-unstable}/bin/niri-session";
       };
 
-      steam = {
-        prettyName = "Steam Gamescope Session";
-        comment = "Gamescope session for Steam";
-        binPath = "/run/current-system/sw/bin/steam-gamescope";
-      };
     };
   };
 }

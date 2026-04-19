@@ -2,7 +2,6 @@
 
 {
   services.xserver.enable = false;
-
   services.displayManager.gdm.enable = false;
   services.displayManager.sddm.enable = false;
   services.displayManager.ly.enable = false;
@@ -20,8 +19,10 @@
             --time \
             --remember \
             --remember-session \
+            --remember-user-session \
             --asterisks \
-            --cmd "/run/current-system/sw/bin/uwsm start default"
+            --user-menu \
+            --sessions /run/current-system/sw/share/wayland-sessions:/run/current-system/sw/share/xsessions
         '';
       };
     };
