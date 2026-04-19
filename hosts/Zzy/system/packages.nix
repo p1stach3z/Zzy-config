@@ -21,5 +21,6 @@
     llvmPackages_latest.llvm
     clang
     rustup
+    clinfo
   ];
 }
