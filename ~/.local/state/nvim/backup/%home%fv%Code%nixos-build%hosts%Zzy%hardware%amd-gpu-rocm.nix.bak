@@ -24,6 +24,9 @@
       extraPackages = with pkgs; [
         mesa.opencl
 	      libvdpau-va-gl
+        rocmPackages.clr
+        rocmPackages.clr.icd
+        rocmPackages.amdsmi
       ];
     };
 
@@ -45,5 +48,16 @@
   services.blueman.enable = true;
   
   services.frigate.vaapiDriver = "radeonsi";
+
+  # /opt/rocm para apps que lo esperan.
+  systemd.tmpfiles.rules =
+    let
+      rocmEnv = pkgs.symlinkJoin {
+        name = "rocm-combined";
+        paths = with pkgs.rocmPackages; [ rocblas hipblas clr ];
+      };
+    in [
+      "L+ /opt/rocm - - - - ${rocmEnv}"
+    ];
 
 }

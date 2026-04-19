@@ -12,6 +12,7 @@
     MOZ_ENABLE_WAYLAND = "1";
 
     AMD_VULKAN_ICD = "RADV";
+    ROCM_PATH = "/opt/rocm";
     RUSTICL_ENABLE = "radeonsi";
     LIBGL_ALWAYS_SOFTWARE = "1";    
 
