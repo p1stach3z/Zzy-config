@@ -19,6 +19,17 @@
             --asterisks \
         '';
       };
+      sessions = {
+        steam-gaming = {
+          command = ''
+            ${lib.getExe pkgs.gamescope} \
+              -W 1920 -H 1080 -f -e \
+              --xwayland-count 2 \
+              -- steam -gamepadui
+        '';
+        user = "fv";
+        };
+      };
     };
   };
 }
