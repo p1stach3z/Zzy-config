@@ -15,5 +15,10 @@
     pavucontrol
     nodejs
     net-tools
+    python3
+    cmake
+    ninja
+    llvmPackages_latest.llvm
+    clang
   ];
 }
