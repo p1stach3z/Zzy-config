@@ -8,8 +8,6 @@
 
   services.greetd = {
     enable = true;
-    restart = true;
-    useTextGreeter = true;
 
     settings = {
       default_session = {
@@ -18,11 +16,7 @@
           ${pkgs.tuigreet}/bin/tuigreet \
             --time \
             --remember \
-            --remember-session \
-            --remember-user-session \
             --asterisks \
-            --user-menu \
-            --cmd "/run/current-system/sw/bin/uwsm start default"
         '';
       };
     };
