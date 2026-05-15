@@ -1,43 +1,37 @@
 { config, lib, pkgs, ... }:
 
-{
-  programs.gamemode.enable = true;
+let
+  steamGamescopeWrapper = pkgs.writeShellScript "steam-gamescope-tty" ''
+    #!/usr/bin/env bash
+    export SDL_VIDEODRIVER=wayland
+    export WLR_RENDERER=vulkan
+    export AMD_VULKAN_ICD=RADV
+    export STEAM_GAMESCOPE_FANCY_SCALING_SUPPORT=1
+    export STEAM_ENABLE_VOLUME_HANDLER=1
+    export STEAM_GAMESCOPE_COLOR_MANAGED=1
 
-  programs.gamescope = {
-    enable = true;
+    # Opciones recomendadas de Gamescope tipo Steam Deck
+    exec ${pkgs.steam}/bin/steam-gamescope \
+      -f -F fsr \
+      --fsr-sharpness 2 \
+      --xwayland-count 2 \
+      --steam \
+      "$@"
+  '';
+in {
+  programs.steam.enable = true;
 
-    # Úsalo solo si quieres darle prioridad RT a gamescope.
-    # Si llegas a notar rarezas, puedes probar a ponerlo en false.
-    capSysNice = true;
-  };
+  # No habilitamos GamescopeSession global, porque queremos control manual desde TTY
+  programs.steam.gamescopeSession.enable = false;
 
-  programs.steam = {
-    enable = true;
-
-    # No lo uses como sesión global dentro de niri.
-    gamescopeSession.enable = false;
-
-    # Útil si quieres Proton GE de forma declarativa.
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
-  };
-
+  # Instalamos nuestro wrapper en PATH para lanzar desde TTY
   environment.systemPackages = with pkgs; [
-    mangohud
-    protonup-qt
-    vulkan-tools
-    mesa-demos
+    steam
     gamescope
-
-    # Opcional: útil para probar launch options con overlays
-    gamemode
   ];
 
-  # En AMD/Mesa evita fijar overrides raros por defecto.
-  # Mesa recomienda no establecer env vars salvo necesidad real.
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      lib.makeSearchPath "compatibilitytools.d" config.programs.steam.extraCompatPackages;
-  };
+  # Alias opcional para lanzar fácil desde TTY
+  home-manager.users.fv.programs.bash.initExtra = ''
+    alias steamdeck="${steamGamescopeWrapper}"
+  '';
 }

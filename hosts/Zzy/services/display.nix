@@ -10,13 +10,14 @@
     enable = true;
 
     settings = {
+      useTextGreeter = true;
       default_session = {
-        user = "greeter";
+        user = "fv";
         command = ''
           ${pkgs.tuigreet}/bin/tuigreet \
             --time \
             --remember \
-            --asterisks \
+            --cmd uwms --start --default
         '';
       };
       sessions = {
