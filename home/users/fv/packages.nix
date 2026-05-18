@@ -23,6 +23,7 @@
 
 
     kdePackages.qtsvg
+        duf
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.kio
