@@ -24,7 +24,6 @@
 
     kdePackages.qtsvg
         duf
-        lshw
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.kio
